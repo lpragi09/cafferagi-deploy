@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('header nav ul li a');
 
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        }
+        link.classList.toggle(
+            'active',
+            link.getAttribute('href') === currentPage
+        );
+
     });
 
     // Pequena animação para as linhas decorativas na página inicial (opcional)
