@@ -31,6 +31,37 @@ document.addEventListener('DOMContentLoaded', function() {
             // }, 500 + (index * 100));
         });
     }
+ // --- Configuração e Envio do EmailJS ---
+
+    // Inicialize o EmailJS com sua Public Key
+    // Sua Public Key: 6FWXo0zidPBs_qRLe
+    emailjs.init({
+        publicKey: "6FWXo0zidPBs_qRLe",
+    });
+
+    // Adicione um listener para o evento de submit do formulário
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário (recarrega a página)
+
+            // Substitua pelos IDs que você obteve no painel do EmailJS
+            const serviceID = 'service_he5tqrd'; // Ex: 'default_service' ou 'gmail_service'
+            const templateID = 'SEU_TEMPLATE_ID'; // Ex: 'contact_form_template'
+
+            // Envia o formulário usando o EmailJS
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+                    contactForm.reset(); // Limpa o formulário após o envio bem-sucedido
+                }, (error) => {
+                    console.error('Falha ao enviar a mensagem:', error);
+                    alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+                });
+        });
+    } else {
+        console.warn("Elemento 'contact-form' não encontrado. O formulário de contato pode não funcionar.");
+    }
 
 
 });
