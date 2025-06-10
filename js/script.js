@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Substitua pelos IDs que você obteve no painel do EmailJS
             const serviceID = 'service_he5tqrd'; // Ex: 'default_service' ou 'gmail_service'
-            const templateID = 'SEU_TEMPLATE_ID'; // Ex: 'contact_form_template'
+            const templateID = 'template_dmhbmna'; // Ex: 'contact_form_template'
 
             // Envia o formulário usando o EmailJS
             emailjs.sendForm(serviceID, templateID, this)
