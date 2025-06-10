@@ -62,7 +62,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.warn("Elemento 'contact-form' não encontrado. O formulário de contato pode não funcionar.");
     }
-
-
 });
 
