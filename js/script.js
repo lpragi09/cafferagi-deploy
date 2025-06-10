@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio padrão do formulário (recarrega a página)
-
             // Substitua pelos IDs que você obteve no painel do EmailJS
             const serviceID = 'service_he5tqrd'; // Ex: 'default_service' ou 'gmail_service'
             const templateID = 'template_dmhbmna'; // Ex: 'contact_form_template'
