@@ -1,4 +1,4 @@
-/* CSS - css/style.css - VERSÃO FINAL COM MODAL COMPACTO NO CELULAR */
+/* CSS - css/style.css - VERSÃO FINAL COM MODAL CENTRALIZADO */
 
 /* === RESET BÁSICO E FONTES === */
 body, h1, h2, h3, p, ul, li, a, address, form, label, input, textarea, button {
@@ -640,7 +640,6 @@ body:not(.home) {
     padding: 30px;
     border-radius: 10px;
     max-width: 700px;
-    width: 100%;
     position: relative;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     transform: scale(0.9);
@@ -720,18 +719,18 @@ body:not(.home) {
 /* === AJUSTES DE RESPONSIVIDADE DO MODAL PARA CELULAR (VERSÃO COMPACTA) === */
 @media (max-width: 768px) {
     .modal-content {
-        max-width: 88%;      /* Mais estreito */
-        padding: 15px 12px;  /* Menos preenchimento */
+        max-width: 88%;
+        padding: 15px 12px;
     }
 
     .modal-body {
         flex-direction: column;
-        align-items: center; /* Centraliza os itens */
+        align-items: center;
         gap: 10px;
     }
 
     .modal-img {
-        width: 65%; /* IMAGEM BEM MENOR */
+        width: 65%;
         max-width: none;
         height: auto;
         margin-bottom: 10px;
@@ -740,25 +739,25 @@ body:not(.home) {
 
     .modal-text {
         width: 100%;
-        text-align: center; /* Centraliza o texto */
+        text-align: center;
     }
 
     .modal-text h3 {
-        font-size: 1.2em; /* Fonte menor */
+        font-size: 1.2em;
         margin-bottom: 8px;
     }
 
     .modal-text p {
-        font-size: 0.9em; /* Fonte menor */
+        font-size: 0.9em;
         margin-bottom: 8px;
     }
 
     #modal-notes {
-        font-size: 0.85em; /* Fonte menor */
+        font-size: 0.85em;
     }
 
     #modal-roast {
-        font-size: 0.9em; /* Fonte menor */
+        font-size: 0.9em;
         margin-top: 10px;
     }
 
