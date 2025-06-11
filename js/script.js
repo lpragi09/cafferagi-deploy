@@ -61,5 +61,68 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.warn("Elemento 'contact-form' não encontrado. O formulário de contato pode não funcionar.");
     }
+
+    // NOVO: LÓGICA PARA O MODAL DE DETALHES DO PRODUTO
+    const detailsIcons = document.querySelectorAll('.details-icon');
+    const modal = document.getElementById('details-modal');
+
+    // Verifica se o modal existe na página para evitar erros
+    if (modal) {
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalNotes = document.getElementById('modal-notes');
+        const modalRoast = document.getElementById('modal-roast');
+
+        detailsIcons.forEach(icon => {
+            icon.addEventListener('click', function(event) {
+                event.preventDefault(); // Impede que o link '#' mude a URL
+
+                // Pega o card do produto pai do ícone clicado
+                const productCard = this.closest('.product-card');
+
+                // Pega as informações do card (dos atributos data-* e de outros elementos)
+                const title = productCard.querySelector('.product-title').innerText;
+                const imageSrc = productCard.querySelector('img').src;
+                const description = productCard.dataset.detailsDescription;
+                const notes = productCard.dataset.detailsNotes;
+                const roast = productCard.dataset.detailsRoast;
+
+                // Preenche o modal com as informações
+                modalImg.src = imageSrc;
+                modalImg.alt = "Imagem do " + title;
+                modalTitle.innerText = title;
+                modalDescription.innerText = description;
+                modalNotes.innerText = notes;
+                modalRoast.innerText = roast;
+
+                // Exibe o modal
+                modal.style.display = 'flex'; // Torna o backdrop visível
+                setTimeout(() => {
+                    modal.classList.add('visible'); // Adiciona a classe para a animação
+                }, 10); // Pequeno delay para garantir que a transição CSS funcione
+            });
+        });
+
+        // Função para fechar o modal
+        function closeModal() {
+            modal.classList.remove('visible');
+            // Espera a transição de opacidade terminar antes de esconder o elemento
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // O tempo deve ser igual à duração da transição no CSS
+        }
+
+        // Event listener para o botão de fechar
+        modalCloseBtn.addEventListener('click', closeModal);
+
+        // Event listener para fechar o modal clicando fora dele (no backdrop)
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    }
 });
 
