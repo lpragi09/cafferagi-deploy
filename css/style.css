@@ -1,4 +1,4 @@
-/* CSS - css/style.css - VERSÃO COMPLETA E CORRIGIDA */
+/* CSS - css/style.css - VERSÃO FINAL COM MODAL COMPACTO NO CELULAR */
 
 /* === RESET BÁSICO E FONTES === */
 body, h1, h2, h3, p, ul, li, a, address, form, label, input, textarea, button {
@@ -717,21 +717,21 @@ body:not(.home) {
     margin-top: 15px;
 }
 
-/* === AJUSTES DE RESPONSIVIDADE DO MODAL PARA CELULAR (REVISADO) === */
+/* === AJUSTES DE RESPONSIVIDADE DO MODAL PARA CELULAR (VERSÃO COMPACTA) === */
 @media (max-width: 768px) {
     .modal-content {
-        max-width: 90%;
-        padding: 15px;
+        max-width: 88%;      /* Mais estreito */
+        padding: 15px 12px;  /* Menos preenchimento */
     }
 
     .modal-body {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center; /* Centraliza os itens */
         gap: 10px;
     }
 
     .modal-img {
-        width: 80%;
+        width: 65%; /* IMAGEM BEM MENOR */
         max-width: none;
         height: auto;
         margin-bottom: 10px;
@@ -740,59 +740,31 @@ body:not(.home) {
 
     .modal-text {
         width: 100%;
+        text-align: center; /* Centraliza o texto */
     }
 
     .modal-text h3 {
-        font-size: 1.3em;
+        font-size: 1.2em; /* Fonte menor */
         margin-bottom: 8px;
     }
 
     .modal-text p {
-        font-size: 0.95em;
+        font-size: 0.9em; /* Fonte menor */
         margin-bottom: 8px;
     }
 
     #modal-notes {
-        font-size: 0.9em;
+        font-size: 0.85em; /* Fonte menor */
     }
 
     #modal-roast {
-        font-size: 0.95em;
+        font-size: 0.9em; /* Fonte menor */
         margin-top: 10px;
     }
 
     .modal-close {
         font-size: 1.6em;
-        top: 5px;
-        right: 8px;
-    }
-}
-
-@media (max-width: 400px) {
-    .modal-content {
-        max-width: 95%;
-        padding: 10px;
-    }
-
-    .modal-text h3 {
-        font-size: 1.2em;
-    }
-
-    .modal-text p {
-        font-size: 0.9em;
-    }
-
-    #modal-notes {
-        font-size: 0.85em;
-    }
-
-    #modal-roast {
-        font-size: 0.9em;
-    }
-
-    .modal-close {
-        font-size: 1.4em;
-        top: 3px;
-        right: 5px;
+        top: 8px;
+        right: 12px;
     }
 }
