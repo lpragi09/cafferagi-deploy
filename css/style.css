@@ -721,6 +721,7 @@ body:not(.home) {
     .modal-content {
         max-width: 88%;
         padding: 15px 12px;
+        margin: auto;
     }
 
     .modal-body {
