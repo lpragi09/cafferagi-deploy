@@ -1,48 +1,32 @@
+/* JAVASCRIPT - js/script.js - VERSÃO FINAL E CORRIGIDA */
+
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Site CAFFÈ RAGI carregado!"); // Corrigido para o nome da sua empresa
+    console.log("Site CAFFÈ RAGI carregado!");
 
     // --- LÓGICA DO MENU ATIVO ---
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll('header nav ul li a');
     navLinks.forEach(link => {
-        // Corrigido para uma verificação mais precisa que funciona em subpastas
         if (link.getAttribute('href').includes(currentPage)) {
             link.classList.add('active');
         }
     });
 
-    // --- ANIMAÇÃO DA PÁGINA INICIAL ---
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-        const lines = document.querySelectorAll('.decorative-lines span');
-        lines.forEach((span, index) => {
-            span.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
-            void span.offsetWidth;
-        });
-    }
-
-    // --- LÓGICA DO FORMULÁRIO DE CONTATO (AGORA SÓ RODA NA PÁGINA CERTA) ---
+    // --- LÓGICA DO FORMULÁRIO DE CONTATO (SÓ RODA NA PÁGINA CERTA) ---
     const contactForm = document.getElementById('contact-form');
-    // Verifica se o formulário E a biblioteca EmailJS existem antes de rodar
     if (contactForm && typeof emailjs !== 'undefined') {
-
-        // Inicializa o EmailJS
-        emailjs.init({
-            publicKey: "6FWXo0zidPBs_qRLe", // Sua Public Key
-        });
-
+        emailjs.init({ publicKey: "6FWXo0zidPBs_qRLe" });
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             const serviceID = 'service_he5tqrd';
             const templateID = 'template_dmhbmna';
-
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
                     contactForm.reset();
                 }, (error) => {
                     console.error('Falha ao enviar a mensagem:', error);
-                    alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+                    alert('Ocorreu um erro ao enviar a mensagem.');
                 });
         });
     }
@@ -61,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         detailsIcons.forEach(icon => {
             icon.addEventListener('click', function(event) {
-                // Impede que o link '#' mude a URL e pule para o topo
                 event.preventDefault();
 
                 const productCard = this.closest('.product-card');
@@ -78,18 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalNotes.innerText = notes;
                 modalRoast.innerText = roast;
 
-                modal.style.display = 'flex';
-                setTimeout(() => {
-                    modal.classList.add('visible');
-                }, 10);
+                // Exibe o modal APENAS adicionando a classe
+                modal.classList.add('visible');
             });
         });
 
+        // Função para fechar o modal
         function closeModal() {
+            // Esconde o modal APENAS removendo a classe
             modal.classList.remove('visible');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
         }
 
         modalCloseBtn.addEventListener('click', closeModal);
