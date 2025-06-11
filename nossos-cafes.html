@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAFFÈ RAGI - Nossos Cafés</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-    <div class="container">
-        <a href="index.html" class="logo"><img src="imagens/logo.png" alt=""></a>
-        <nav>
-            <ul>
-                <li><a href="/" >HOME</a></li>
-                <li><a href="/nossa-historia/">NOSSA HISTÓRIA</a></li>
-                <li><a href="/nossos-cafes/">NOSSOS CAFÉS</a></li>
-                <li><a href="/processo/">PROCESSO</a></li>
-                <li><a href="/contato/">CONTATO</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+        <div class="container">
+            <a href="index.html" class="logo"><img src="imagens/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="/" >HOME</a></li>
+                    <li><a href="/nossa-historia/">NOSSA HISTÓRIA</a></li>
+                    <li><a href="/nossos-cafes/">NOSSOS CAFÉS</a></li>
+                    <li><a href="/processo/">PROCESSO</a></li>
+                    <li><a href="/contato/">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main class="page-content ecommerce-page">
         <div class="container">
             <h2 class="ecommerce-title">Nossos Cafés Artesanais</h2>
 
-
             <div class="product-grid">
-                <div class="product-card">
+
+                <div class="product-card"
+                     data-details-description="Nosso Arábica Clássico é cultivado nas altas montanhas, resultando em uma bebida de acidez equilibrada e corpo aveludado."
+                     data-details-notes="Notas de chocolate, caramelo e um toque de frutas cítricas."
+                     data-details-roast="Torra: Média">
                     <div class="product-image-wrapper">
                         <img src="imagens/500g.png" alt="Café Arábica Especial 250g">
                         <span class="badge new-item">Novo!</span>
+                        <a href="#" class="details-icon" aria-label="Ver detalhes"><i class="fas fa-info-circle"></i></a>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Arábica Clássico</h3>
@@ -46,10 +50,14 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card"
+                     data-details-description="Uma seleção exclusiva dos melhores grãos da safra, com um processo de torra artesanal que realça sua complexidade."
+                     data-details-notes="Sabor intenso com notas de frutas vermelhas, melaço e cacau."
+                     data-details-roast="Torra: Média-Escura">
                     <div class="product-image-wrapper">
                         <img src="imagens/500g.png" alt="Blend Intenso em Grãos 500g">
-                         <span class="badge best-seller">Mais Vendido</span>
+                        <span class="badge best-seller">Mais Vendido</span>
+                         <a href="#" class="details-icon" aria-label="Ver detalhes"><i class="fas fa-info-circle"></i></a>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Edição Especial</h3>
@@ -57,40 +65,48 @@
                         <div class="product-price-tag">
                             R$ <span class="price-main">75</span><span class="price-small">,90</span>
                         </div>
-                        <a href="https://wa.me/+5535988877102?text=Olá!%20Gostaria%20de%20comprar%20o%20Café%20Edição%20Especial%20em%20Grãos%20(250g).   " class="btn-purchase" target="_blank">
+                        <a href="https://wa.me/+5535988877102?text=Olá!%20Gostaria%20de%20comprar%20o%20Café%20Edição%20Especial%20em%20Grãos%20(250g)." class="btn-purchase" target="_blank">
                             <i class="fab fa-whatsapp"></i> Comprar
                         </a>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card"
+                     data-details-description="Cultivado sem agrotóxicos e com respeito ao meio ambiente. Um café puro, de sabor limpo e finalização suave."
+                     data-details-notes="Apresenta doçura natural com notas de castanhas e rapadura."
+                     data-details-roast="Torra: Clara">
                     <div class="product-image-wrapper">
                         <img src="imagens/500g.png" alt="Café Orgânico Suave 1kg">
+                         <a href="#" class="details-icon" aria-label="Ver detalhes"><i class="fas fa-info-circle"></i></a>
                     </div>
-                     <div class="product-info">
+                    <div class="product-info">
                         <h3 class="product-title">Orgânico Suave</h3>
-                        <p class="product-variant">Grãos - 250</p>
+                        <p class="product-variant">Grãos - 250g</p>
                         <div class="product-price-tag">
                             R$ <span class="price-main">55</span><span class="price-small">,00</span>
                         </div>
                         <a href="https://wa.me/+5535988877102?text=Olá!%20Gostaria%20de%20comprar%20o%20Café%20Orgânico%20Suave%20em%20Grãos%20(250kg)." class="btn-purchase" target="_blank">
-                           <i class="fab fa-whatsapp"></i> Comprar
+                            <i class="fab fa-whatsapp"></i> Comprar
                         </a>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card"
+                     data-details-description="Uma combinação poderosa de grãos selecionados para um espresso marcante ou um coado cheio de personalidade."
+                     data-details-notes="Corpo denso, baixa acidez e notas de chocolate amargo e nozes tostadas."
+                     data-details-roast="Torra: Escura">
                     <div class="product-image-wrapper">
-                        <img src="imagens/500g.png " alt="Café Edição Especial 250g">
+                        <img src="imagens/500g.png" alt="Café Edição Especial 250g">
+                         <a href="#" class="details-icon" aria-label="Ver detalhes"><i class="fas fa-info-circle"></i></a>
                     </div>
-                     <div class="product-info">
+                    <div class="product-info">
                         <h3 class="product-title">Blend Intenso</h3>
                         <p class="product-variant">Moído Fino - 250g</p>
                         <div class="product-price-tag">
                             R$ <span class="price-main">45</span><span class="price-small">,00</span>
                         </div>
                         <a href="https://wa.me/+5535988877102?text=Olá!%20Gostaria%20de%20comprar%20o%20Blend%20Intenso%20Moído%20Fino%20(250g)." class="btn-purchase" target="_blank">
-                           <i class="fab fa-whatsapp"></i> Comprar
+                            <i class="fab fa-whatsapp"></i> Comprar
                         </a>
                     </div>
                 </div>
@@ -112,6 +128,21 @@
             </div>
         </div>
     </footer>
+
+    <div id="details-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close">&times;</button>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Imagem do Café" class="modal-img">
+                <div class="modal-text">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                    <p id="modal-notes"></p>
+                    <p id="modal-roast"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
