@@ -737,4 +737,40 @@ body:not(.home) {
     .modal-text h3 {
         font-size: 1.5em;
     }
+
+    /* === AJUSTES DE RESPONSIVIDADE DO MODAL PARA CELULAR === */
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 95%; /* Ocupa quase toda a largura da tela */
+        padding: 20px; /* Reduz um pouco o espaçamento interno */
+    }
+
+    .modal-body {
+        flex-direction: column; /* Empilha a imagem e o texto verticalmente */
+        align-items: stretch; /* Faz os itens ocuparem a largura total */
+        gap: 15px; /* Reduz o espaço entre a imagem e o texto */
+    }
+
+    .modal-img {
+        width: 100%; /* A imagem ocupa toda a largura disponível */
+        max-width: none; /* Remove a largura máxima anterior */
+        height: auto;
+        margin-bottom: 15px; /* Adiciona espaço abaixo da imagem */
+    }
+
+    .modal-text {
+        width: 100%; /* O texto ocupa toda a largura */
+    }
+
+    .modal-text h3 {
+        font-size: 1.4em; /* Reduz um pouco o tamanho do título */
+        margin-bottom: 10px;
+    }
+
+    .modal-close {
+        font-size: 1.8em; /* Reduz um pouco o tamanho do botão de fechar */
+        top: 8px;
+        right: 10px;
+    }
+}
 }
