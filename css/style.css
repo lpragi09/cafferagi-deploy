@@ -1,4 +1,4 @@
-/* CSS - css/style.css - VERSÃO FINAL COM MODAL CENTRALIZADO */
+/* CSS - css/style.css - VERSÃO FINAL COM CENTRALIZAÇÃO CORRIGIDA */
 
 /* === RESET BÁSICO E FONTES === */
 body, h1, h2, h3, p, ul, li, a, address, form, label, input, textarea, button {
@@ -621,13 +621,11 @@ body:not(.home) {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto; /* Permite rolar o fundo se o modal for muito alto */
 }
 
 .modal-backdrop.visible {
@@ -644,6 +642,7 @@ body:not(.home) {
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     transform: scale(0.9);
     transition: transform 0.3s ease;
+    margin: 5vh auto; /* 5% da altura da tela no topo/baixo, e auto nas laterais para centralizar */
 }
 
 .modal-backdrop.visible .modal-content {
@@ -721,6 +720,7 @@ body:not(.home) {
     .modal-content {
         max-width: 88%;
         padding: 15px 12px;
+        margin: auto; /* Centraliza perfeitamente em telas menores */
     }
 
     .modal-body {
