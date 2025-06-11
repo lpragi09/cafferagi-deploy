@@ -1,4 +1,4 @@
-/* CSS - css/style.css - VERSÃO FINAL COM CENTRALIZAÇÃO VIA GRID */
+/* CSS - css/style.css - VERSÃO DE TESTE SEM ANIMAÇÃO NO MODAL */
 
 /* === RESET BÁSICO E FONTES === */
 body, h1, h2, h3, p, ul, li, a, address, form, label, input, textarea, button {
@@ -623,10 +623,10 @@ body:not(.home) {
     z-index: 2000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* A transição da animação agora é SÓ na opacidade */
+    transition: opacity 0.3s ease;
     overflow-y: auto;
     padding: 20px;
-    /* NOVO MÉTODO DE CENTRALIZAÇÃO */
     display: grid;
     place-items: center;
 }
@@ -643,14 +643,12 @@ body:not(.home) {
     max-width: 700px;
     position: relative;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-    /* margin foi removida daqui para o grid controlar */
+    /* REMOVIDA a animação de transform/scale daqui para o teste */
 }
 
-.modal-backdrop.visible .modal-content {
-    transform: scale(1);
-}
+/* .modal-backdrop.visible .modal-content { */
+    /* REMOVIDA a animação de transform/scale daqui para o teste */
+/* } */
 
 .modal-close {
     position: absolute;
