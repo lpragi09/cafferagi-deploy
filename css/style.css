@@ -1,4 +1,4 @@
-/* CSS - css/style.css - CAMINHOS DE IMAGEM CORRIGIDOS */
+/* CSS - css/style.css - CORRIGIDO */
 
 /* === RESET BÁSICO E FONTES === */
 body, h1, h2, h3, p, ul, li, a, address, form, label, input, textarea, button {
@@ -584,8 +584,13 @@ body:not(.home) {
     body:not(.home) {
         background-attachment: scroll;
     }
+}
 
-    /* NOVO: Estilo para o ícone de detalhes */
+/* ============================================== */
+/* === NOVOS ESTILOS PARA ÍCONE E MODAL === */
+/* ============================================== */
+
+/* NOVO: Estilo para o ícone de detalhes */
 .details-icon {
     position: absolute;
     top: 10px;
@@ -732,6 +737,4 @@ body:not(.home) {
     .modal-text h3 {
         font-size: 1.5em;
     }
-}
-
 }
